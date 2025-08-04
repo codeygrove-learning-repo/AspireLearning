@@ -1,0 +1,82 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CatalogApi",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/CatalogApi/bin/Debug/net9.0/AspireLearning.CatalogApi.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/CatalogApi",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "OrderApi",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/OrderApi/bin/Debug/net9.0/AspireLearning.OrderApi.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/OrderApi",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "WebPortal",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/WebPortal/bin/Debug/net9.0/AspireLearning.WebPortal.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/WebPortal",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "OrderProcessor",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/OrderProcessor/bin/Debug/net9.0/AspireLearning.OrderProcessor.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/OrderProcessor",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "InvoiceConsumer",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/InvoiceConsumer/bin/Debug/net9.0/AspireLearning.InvoiceConsumer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/InvoiceConsumer",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "VendorResupplyConsumer",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/VendorResupplyConsumer/bin/Debug/net9.0/AspireLearning.VendorResupplyConsumer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/VendorResupplyConsumer",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    },
+    {
+      "name": "ReplenishmentConsumer",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/ReplenishmentConsumer/bin/Debug/net9.0/AspireLearning.ReplenishmentConsumer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/ReplenishmentConsumer",
+      "stopAtEntry": false,
+      "console": "internalConsole"
+    }
+  ]
+} 

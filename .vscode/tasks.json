@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "command": "dotnet",
+      "type": "process",
+      "args": [
+        "build",
+        "${workspaceFolder}/AspireLearning.sln"
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build CatalogApi",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/CatalogApi/AspireLearning.CatalogApi.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build OrderApi",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/OrderApi/AspireLearning.OrderApi.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build WebPortal",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/WebPortal/AspireLearning.WebPortal.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build OrderProcessor",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/OrderProcessor/AspireLearning.OrderProcessor.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build InvoiceConsumer",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/InvoiceConsumer/AspireLearning.InvoiceConsumer.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build VendorResupplyConsumer",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/VendorResupplyConsumer/AspireLearning.VendorResupplyConsumer.csproj"],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build ReplenishmentConsumer",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["build", "${workspaceFolder}/src/ReplenishmentConsumer/AspireLearning.ReplenishmentConsumer.csproj"],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+} 
