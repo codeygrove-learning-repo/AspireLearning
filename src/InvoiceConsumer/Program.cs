@@ -7,12 +7,17 @@ namespace AspireLearning.InvoiceConsumer
 {
     public class Program
     {
-        private const string eventHubConnectionString = "<EVENTHUB_CONNSTR>";
-        private const string eventHubName = "order-delivered";
-        private const string consumerGroup = "invoice";
-
         public static async Task Main(string[] args)
         {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            var eventHubConnectionString = config["EventHub:ConnectionString"];
+            var eventHubName = config["EventHub:EventHubName"];
+            var consumerGroup = config["EventHub:ConsumerGroup"];
+
             await using var consumer = new EventHubConsumerClient(consumerGroup, eventHubConnectionString, eventHubName);
             Console.WriteLine("InvoiceConsumer started. Listening for events...");
             await foreach (PartitionEvent partitionEvent in consumer.ReadEventsAsync(CancellationToken.None))

@@ -18,11 +18,12 @@ namespace AspireLearning.OrderApi.Controllers
         private readonly ServiceBusClient _serviceBusClient;
         private readonly string _queueName = "orders";
 
-        public OrderController(IOptions<MongoDbSettings> settings)
+        public OrderController(IOptions<MongoDbSettings> settings, IConfiguration configuration)
         {
             _repo = new OrderRepository(settings.Value);
             _catalogRepo = new CatalogRepository(settings.Value);
-            _serviceBusClient = new ServiceBusClient("<SERVICEBUS_CONNSTR>");
+            var serviceBusConnectionString = configuration["ServiceBus:ConnectionString"];
+            _serviceBusClient = new ServiceBusClient(serviceBusConnectionString);
         }
 
         [HttpGet]

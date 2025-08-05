@@ -20,10 +20,12 @@ namespace AspireLearning.OrderProcessor
         private readonly string _queueName = "orders";
         private readonly string _eventHubName = "order-delivered";
 
-        public Worker(IOptions<MongoDbSettings> settings)
+        public Worker(IOptions<MongoDbSettings> settings, IConfiguration configuration)
         {
-            _serviceBusClient = new ServiceBusClient("<SERVICEBUS_CONNSTR>");
-            _eventHubProducerClient = new EventHubProducerClient("<EVENTHUB_CONNSTR>", _eventHubName);
+            var serviceBusConnectionString = configuration["ServiceBus:ConnectionString"];
+            var eventHubConnectionString = configuration["EventHub:ConnectionString"];
+            _serviceBusClient = new ServiceBusClient(serviceBusConnectionString);
+            _eventHubProducerClient = new EventHubProducerClient(eventHubConnectionString, _eventHubName);
             _orderRepo = new OrderRepository(settings.Value);
         }
 
