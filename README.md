@@ -1,5 +1,6 @@
 # Pre-requisite
-- You have [free MongoDB cluster](https://www.mongodb.com/cloud/atlas/register?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core-high-int_prosp-brand_gic-null_ww-tier4_ps-all_desktop_eng_lead&utm_term=atlas%20mongodb&utm_medium=cpc_paid_search&utm_ad=p&utm_ad_campaign_id=22031347578&adgroup=173739098633&cq_cmp=22031347578&gad_source=1&gad_campaignid=22031347578&gbraid=0AAAAADQ1403kzPOO6bPF2YQ0jzuhSc7zx&gclid=Cj0KCQjwtMHEBhC-ARIsABua5iTo1BirJE8jZU54QhR6DBU2NAB7uDvcbhQfxWWwm5A3Sib1W-QrW1QaAn_8EALw_wcB)
+- You have local MongoDB Service configured. Refer to [mongodb-setup.md](mongodb_local_setup\mongodb-setup.md)
+- If you prefer to use [free MongoDB cluster](https://www.mongodb.com/cloud/atlas/register?utm_source=google&utm_campaign=search_gs_pl_evergreen_atlas_core-high-int_prosp-brand_gic-null_ww-tier4_ps-all_desktop_eng_lead&utm_term=atlas%20mongodb&utm_medium=cpc_paid_search&utm_ad=p&utm_ad_campaign_id=22031347578&adgroup=173739098633&cq_cmp=22031347578&gad_source=1&gad_campaignid=22031347578&gbraid=0AAAAADQ1403kzPOO6bPF2YQ0jzuhSc7zx&gclid=Cj0KCQjwtMHEBhC-ARIsABua5iTo1BirJE8jZU54QhR6DBU2NAB7uDvcbhQfxWWwm5A3Sib1W-QrW1QaAn_8EALw_wcB), ensure that
   - Network access has been configured and able to connect from local machine
   - Database name in this project is `AspireLearning` with two collections:
     - `catalogs`
