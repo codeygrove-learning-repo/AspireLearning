@@ -1,5 +1,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults(); // Added by Aspire Orchestration
+
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -7,6 +9,8 @@ builder.Services.Configure<AspireLearning.Repository.MongoDbSettings>(builder.Co
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.MapDefaultEndpoints(); // Added by Aspire Orchestration
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireLearning.Replenishmen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireLearning.OrderProcessor", "src\OrderProcessor\AspireLearning.OrderProcessor.csproj", "{98C6446E-5433-4E8D-9819-D0C816BEB3DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireLearning.AppHost", "src\AspireLearning.AppHost\AspireLearning.AppHost.csproj", "{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspireLearning.ServiceDefaults", "src\AspireLearning.ServiceDefaults\AspireLearning.ServiceDefaults.csproj", "{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +147,30 @@ Global
 		{98C6446E-5433-4E8D-9819-D0C816BEB3DB}.Release|x64.Build.0 = Release|Any CPU
 		{98C6446E-5433-4E8D-9819-D0C816BEB3DB}.Release|x86.ActiveCfg = Release|Any CPU
 		{98C6446E-5433-4E8D-9819-D0C816BEB3DB}.Release|x86.Build.0 = Release|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Debug|x86.Build.0 = Debug|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Release|x64.ActiveCfg = Release|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Release|x64.Build.0 = Release|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Release|x86.ActiveCfg = Release|Any CPU
+		{9DD12F22-FF7B-441B-8C63-7A364FEF03AF}.Release|x86.Build.0 = Release|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Debug|x64.Build.0 = Debug|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Debug|x86.Build.0 = Debug|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Release|x64.ActiveCfg = Release|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Release|x64.Build.0 = Release|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Release|x86.ActiveCfg = Release|Any CPU
+		{0F6F12D1-2FF5-5FDD-684E-01FD5B317E89}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,5 +186,8 @@ Global
 		{28B62E6C-3CE7-4B1A-9234-A3BD393C2230} = {FFBE31B8-50B9-B415-22BC-2F92C97CADA3}
 		{AB543547-D7F4-4C56-89C5-9F2EA53C6C5F} = {FFBE31B8-50B9-B415-22BC-2F92C97CADA3}
 		{98C6446E-5433-4E8D-9819-D0C816BEB3DB} = {FFBE31B8-50B9-B415-22BC-2F92C97CADA3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14A7DC35-2A88-4F6C-B035-7ADDCA87ADE0}
 	EndGlobalSection
 EndGlobal
