@@ -13,74 +13,74 @@ db.catalogs.insertMany([
   {
     "_id": "1692eed5-f3fe-4c94-a767-e7b9bfb41552",
     "Name": "The Clean Code",
-    "description": "A Handbook of Agile Software Craftsmanship by Robert C. Martin",
-    "catalogType": "Book",
-    "price": NumberDecimal("45.99"),
-    "availableStock": NumberInt("25"),
-    "availableForSell": NumberInt("23")
+    "Description": "A Handbook of Agile Software Craftsmanship by Robert C. Martin",
+    "CatalogType": "Book",
+    "Price": NumberDecimal("45.99"),
+    "AvailableStock": NumberInt("25"),
+    "AvailableForSell": NumberInt("23")
   },
   {
     "_id": "2a3b4c5d-6e7f-8g9h-0i1j-2k3l4m5n6o7p",
     "Name": "Design Patterns",
-    "description": "Elements of Reusable Object-Oriented Software by Gang of Four",
-    "catalogType": "Book",
-    "price": NumberDecimal("52.99"),
-    "availableStock": NumberInt("15"),
-    "availableForSell": NumberInt("15")
+    "Description": "Elements of Reusable Object-Oriented Software by Gang of Four",
+    "CatalogType": "Book",
+    "Price": NumberDecimal("52.99"),
+    "AvailableStock": NumberInt("15"),
+    "AvailableForSell": NumberInt("15")
   },
   {
     "_id": "3b4c5d6e-7f8g-9h0i-1j2k-3l4m5n6o7p8q",
     "Name": "Clean Architecture",
-    "description": "A Craftsman's Guide to Software Structure and Design by Robert C. Martin",
-    "catalogType": "Book",
-    "price": NumberDecimal("48.99"),
-    "availableStock": NumberInt("30"),
-    "availableForSell": NumberInt("28")
+    "Description": "A Craftsman's Guide to Software Structure and Design by Robert C. Martin",
+    "CatalogType": "Book",
+    "Price": NumberDecimal("48.99"),
+    "AvailableStock": NumberInt("30"),
+    "AvailableForSell": NumberInt("28")
   },
   {
     "_id": "4c5d6e7f-8g9h-0i1j-2k3l-4m5n6o7p8q9r",
     "Name": "MongoDB Atlas Course",
-    "description": "Complete MongoDB Atlas cloud database course",
-    "catalogType": "Course",
-    "price": NumberDecimal("129.99"),
-    "availableStock": NumberInt("100"),
-    "availableForSell": NumberInt("100")
+    "Description": "Complete MongoDB Atlas cloud database course",
+    "CatalogType": "Course",
+    "Price": NumberDecimal("129.99"),
+    "AvailableStock": NumberInt("100"),
+    "AvailableForSell": NumberInt("100")
   },
   {
     "_id": "5d6e7f8g-9h0i-1j2k-3l4m-5n6o7p8q9r0s",
     "Name": "ASP.NET Core in Action",
-    "description": "Building modern web applications with ASP.NET Core",
-    "catalogType": "Book",
-    "price": NumberDecimal("55.99"),
-    "availableStock": NumberInt("20"),
-    "availableForSell": NumberInt("18")
+    "Description": "Building modern web applications with ASP.NET Core",
+    "CatalogType": "Book",
+    "Price": NumberDecimal("55.99"),
+    "AvailableStock": NumberInt("20"),
+    "AvailableForSell": NumberInt("18")
   },
   {
     "_id": "6e7f8g9h-0i1j-2k3l-4m5n-6o7p8q9r0s1t",
     "Name": "Docker Deep Dive",
-    "description": "A comprehensive guide to containerization with Docker",
-    "catalogType": "Book",
-    "price": NumberDecimal("42.99"),
-    "availableStock": NumberInt("12"),
-    "availableForSell": NumberInt("12")
+    "Description": "A comprehensive guide to containerization with Docker",
+    "CatalogType": "Book",
+    "Price": NumberDecimal("42.99"),
+    "AvailableStock": NumberInt("12"),
+    "AvailableForSell": NumberInt("12")
   },
   {
     "_id": "7f8g9h0i-1j2k-3l4m-5n6o-7p8q9r0s1t2u",
     "Name": "Microservices Patterns",
-    "description": "Designing microservices architecture patterns",
-    "catalogType": "Book",
-    "price": NumberDecimal("59.99"),
-    "availableStock": NumberInt("8"),
-    "availableForSell": NumberInt("7")
+    "Description": "Designing microservices architecture patterns",
+    "CatalogType": "Book",
+    "Price": NumberDecimal("59.99"),
+    "AvailableStock": NumberInt("8"),
+    "AvailableForSell": NumberInt("7")
   },
   {
     "_id": "8g9h0i1j-2k3l-4m5n-6o7p-8q9r0s1t2u3v",
     "Name": "Cloud Computing Fundamentals",
-    "description": "Introduction to cloud computing concepts and services",
-    "catalogType": "Course",
-    "price": NumberDecimal("89.99"),
-    "availableStock": NumberInt("50"),
-    "availableForSell": NumberInt("50")
+    "Description": "Introduction to cloud computing concepts and services",
+    "CatalogType": "Course",
+    "Price": NumberDecimal("89.99"),
+    "AvailableStock": NumberInt("50"),
+    "AvailableForSell": NumberInt("50")
   }
 ]);
 
@@ -182,8 +182,8 @@ db.orders.insertMany([
 
 // Create indexes for better performance
 db.catalogs.createIndex({ "Name": 1 });
-db.catalogs.createIndex({ "catalogType": 1 });
-db.catalogs.createIndex({ "price": 1 });
+db.catalogs.createIndex({ "CatalogType": 1 });
+db.catalogs.createIndex({ "Price": 1 });
 
 db.orders.createIndex({ "OrderDate": -1 });
 db.orders.createIndex({ "Delivered": 1 });
