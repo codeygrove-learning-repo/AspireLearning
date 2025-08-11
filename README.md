@@ -36,4 +36,5 @@
    - Open up terminal and change directory to `src\mobileapp`
    - Run `npm install`
    - Run `npm run dev`
-   - This will run the Vite + React based mobile app to set order to deliver
+   - Open browser and go to http://localhost:5173/ (default vite app port)
+   - Set order to deliver
