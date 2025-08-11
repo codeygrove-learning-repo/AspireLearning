@@ -33,7 +33,7 @@
    - OrderProcessor
 5. Run Visual Studio 2022 multiple project profile. This will start all project above.
 6. Once all projects have run, open up AspireLearning folder using VS Code
-   - Open up terminal and browse to `src\mobileapp`
+   - Open up terminal and change directory to `src\mobileapp`
    - Run `npm install`
    - Run `npm run dev`
    - This will run the Vite + React based mobile app to set order to deliver
