@@ -5,6 +5,7 @@
   - Database name in this project is `AspireLearning` with two collections:
     - `catalogs`
     - `orders`
+  - Refer to [mongodb-setup.md](mongodb_local_setup\mongodb-setup.md) for injesting test data to your cluster
 - You have created event hub namespace
   - `order-delivered` event hub is created with the following three consumer groups and manage access connection string
     - `invoice`
@@ -13,11 +14,10 @@
 - You have created service bus namespace
   - `orders` queue is created with manage connection string
 
-# Assumption made
-- You have background in `npm`
-- You have background in .Net C#
+- You have Docker installed
 - You have Visual Studio 2022 installed (I am using this to run all projects)
 - You have VS Code installed (I am using this to run Vite + React mobile app)
+
 
 # How to run
 1. Search and replace `<SERVICEBUS_CONNSTR>` with your `orders` service bus queue manage connection string
