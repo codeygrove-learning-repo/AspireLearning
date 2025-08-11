@@ -22,7 +22,7 @@
 # How to run
 1. Search and replace `<SERVICEBUS_CONNSTR>` with your `orders` service bus queue manage connection string
 2. Search and replace `<EVENTHUB_CONNSTR>` with your `order-delivered` event hub manage connection string
-3. Search and replace `<MONGODB_CONNSTR>` with your MongoDB connection string
+3. Search and replace `mongodb://localhost:27017` with your MongoDB connection string if you have your free mongodb Atlas cluster
 4. Configure Visual Studio 2022 Profile to [start multiple projects](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2022):
    - CatalogApi
    - OrderApi

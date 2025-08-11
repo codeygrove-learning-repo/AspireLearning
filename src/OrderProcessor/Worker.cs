@@ -16,17 +16,15 @@ namespace AspireLearning.OrderProcessor
     {
         private readonly ServiceBusClient _serviceBusClient;
         private readonly EventHubProducerClient _eventHubProducerClient;
-        private readonly OrderRepository _orderRepo;
         private readonly string _queueName = "orders";
         private readonly string _eventHubName = "order-delivered";
 
-        public Worker(IOptions<MongoDbSettings> settings, IConfiguration configuration)
+        public Worker(IConfiguration configuration)
         {
             var serviceBusConnectionString = configuration["ServiceBus:ConnectionString"];
             var eventHubConnectionString = configuration["EventHub:ConnectionString"];
             _serviceBusClient = new ServiceBusClient(serviceBusConnectionString);
             _eventHubProducerClient = new EventHubProducerClient(eventHubConnectionString, _eventHubName);
-            _orderRepo = new OrderRepository(settings.Value);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -40,7 +38,6 @@ namespace AspireLearning.OrderProcessor
                 {
                     if (msg.Type == "OrderDelivered" && msg.OrderId != null)
                     {
-                        await _orderRepo.SetDeliveredAsync(msg.OrderId);
                         // Publish to Event Hub
                         using EventDataBatch eventBatch = await _eventHubProducerClient.CreateBatchAsync();
                         eventBatch.TryAdd(new EventData(JsonSerializer.Serialize(new { OrderId = msg.OrderId, Delivered = true })));
