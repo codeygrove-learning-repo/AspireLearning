@@ -30,7 +30,7 @@ net start MongoDB
 mongod --dbpath "C:\data\db"
 ```
 
-### 2. Installation Script to Prepare Local MongoDB Service
+### 2. Installation Script to Prepare Local MongoDB Service Using Bash
 
 ```bash
 # Ensure that you have change directory to `mongodb_local_setup`
