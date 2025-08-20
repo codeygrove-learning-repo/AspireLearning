@@ -13,7 +13,8 @@ function App() {
     }
     try {
       // Adjust the API URL as needed for your environment
-      const response = await fetch(`https://localhost:7048/api/order/deliver/${orderId}`, {
+        // const response = await fetch(`https://localhost:7048/api/order/deliver/${orderId}`, {
+      const response = await fetch(`/api/order/deliver/${orderId}`, {
         method: 'PUT',
       });
       if (response.ok) {

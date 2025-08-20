@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AspireLearning.ServiceDefaults\AspireLearning.ServiceDefaults.csproj" />
     <ProjectReference Include="..\Contracts\AspireLearning.Contracts.csproj" />
   </ItemGroup>
 </Project>

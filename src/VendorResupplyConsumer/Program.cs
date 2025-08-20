@@ -1,33 +1,8 @@
-using Azure.Messaging.EventHubs.Consumer;
-using System;
-using System.Threading;
-using System.Threading.Tasks;
+var builder = Host.CreateApplicationBuilder(args);
 
-namespace AspireLearning.VendorResupplyConsumer
-{
-    public class Program
-    {
-        public static async Task Main(string[] args)
-        {
-            var config = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
+builder.AddServiceDefaults();
 
-            var eventHubConnectionString = config["EventHub:ConnectionString"];
-            var eventHubName = config["EventHub:EventHubName"];
-            var consumerGroup = config["EventHub:ConsumerGroup"];
+builder.Services.AddHostedService<AspireLearning.VendorResupplyConsumer.Worker>();
 
-            await using var consumer = new EventHubConsumerClient(consumerGroup, eventHubConnectionString, eventHubName);
-            Console.WriteLine("VendorResupplyConsumer started. Listening for events...");
-            await foreach (PartitionEvent partitionEvent in consumer.ReadEventsAsync(CancellationToken.None))
-            {
-                if (partitionEvent.Data?.EventBody != null)
-                {
-                    string data = partitionEvent.Data.EventBody.ToString();
-                    Console.WriteLine($"[VendorResupplyConsumer] Received event: {data}");
-                }
-            }
-        }
-    }
-}
+var host = builder.Build();
+host.Run();

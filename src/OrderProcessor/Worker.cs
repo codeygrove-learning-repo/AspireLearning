@@ -9,6 +9,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
+using ZstdSharp.Unsafe;
 
 namespace AspireLearning.OrderProcessor
 {
@@ -18,13 +19,15 @@ namespace AspireLearning.OrderProcessor
         private readonly EventHubProducerClient _eventHubProducerClient;
         private readonly string _queueName = "orders";
         private readonly string _eventHubName = "order-delivered";
+        private readonly ILogger<Worker> _logger;
 
-        public Worker(IConfiguration configuration)
+        public Worker(IConfiguration configuration, ILogger<Worker> logger)
         {
             var serviceBusConnectionString = configuration["ServiceBus:ConnectionString"];
             var eventHubConnectionString = configuration["EventHub:ConnectionString"];
             _serviceBusClient = new ServiceBusClient(serviceBusConnectionString);
             _eventHubProducerClient = new EventHubProducerClient(eventHubConnectionString, _eventHubName);
+            _logger = logger;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)

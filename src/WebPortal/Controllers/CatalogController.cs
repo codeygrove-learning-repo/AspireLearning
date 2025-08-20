@@ -11,11 +11,12 @@ namespace AspireLearning.WebPortal.Controllers
     {
         private readonly HttpClient _httpClient;
         //private readonly string _apiBase = "https://localhost:5001/api/catalog";
-        private readonly string _apiBase = "https://localhost:7151/api/catalog";
+        //private readonly string _apiBase = "https://localhost:7151/api/catalog";
+        private readonly string _apiBase = "api/catalog";
 
         public CatalogController(IHttpClientFactory httpClientFactory)
         {
-            _httpClient = httpClientFactory.CreateClient();
+            _httpClient = httpClientFactory.CreateClient("aspirelearning-catalogapi");
         }
 
         public async Task<IActionResult> Index()

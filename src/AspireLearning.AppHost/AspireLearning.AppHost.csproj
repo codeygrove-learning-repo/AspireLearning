@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>5069403c-b44f-4698-ab7a-7ef94dea5f66</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.1" />
+    <PackageReference Include="CommunityToolkit.Aspire.Hosting.NodeJS.Extensions" Version="9.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CatalogApi\AspireLearning.CatalogApi.csproj" />
+    <ProjectReference Include="..\InvoiceConsumer\AspireLearning.InvoiceConsumer.csproj" />
+    <ProjectReference Include="..\OrderApi\AspireLearning.OrderApi.csproj" />
+    <ProjectReference Include="..\OrderProcessor\AspireLearning.OrderProcessor.csproj" />
+    <ProjectReference Include="..\ReplenishmentConsumer\AspireLearning.ReplenishmentConsumer.csproj" />
+    <ProjectReference Include="..\VendorResupplyConsumer\AspireLearning.VendorResupplyConsumer.csproj" />
+    <ProjectReference Include="..\WebPortal\AspireLearning.WebPortal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
